@@ -1,6 +1,4 @@
-# solana-assistant-agent
-
-# Crypto Assistant Agent
+# Solana Assistant Agent
 
 This repository contains a Python-based smart assistant for cryptocurrency information using LangChain and Groq. The assistant can fetch real-time token prices and rug scores for Solana memecoin tokens.
 
