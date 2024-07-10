@@ -4,7 +4,7 @@ import operator
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, ToolMessage
 from langchain_groq import ChatGroq
 
-from .utils import get_price_for_token, get_rug_score
+from utils import get_price_for_token, get_rug_score
 from langgraph.checkpoint.sqlite import SqliteSaver
 
 class AgentState(TypedDict):
@@ -51,9 +51,9 @@ if __name__ == "__main__":
     Only look up information when you are sure of what you want. \
     If you need to look up some information before asking a follow-up question, you are allowed to do that.
     """
-    model = ChatGroq(model_name="gemma2-9b-it", api_key="your_api_key_here")
+    model = ChatGroq(model_name="gemma2-9b-it", api_key="Your grok api key here")
 
-    agent = Agent(model, [get_price_for_token, get_rug_score], system=prompt)
+    agent = Agent(model, [get_price_for_token, get_rug_score], system=prompt,checkpointer=memory)
 
     # Example Input and Output
     messages = [HumanMessage(content="is this rug MAXt5moBxMd665GKPx6bammFf5t9pPSG6q7z9Adtm9Z")]
