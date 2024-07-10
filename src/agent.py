@@ -51,7 +51,7 @@ if __name__ == "__main__":
     Only look up information when you are sure of what you want. \
     If you need to look up some information before asking a follow-up question, you are allowed to do that.
     """
-    model = ChatGroq(model_name="gemma2-9b-it", api_key="Your grok api key here")
+    model = ChatGroq(model_name="gemma2-9b-it", api_key="Your groq api key here")
 
     agent = Agent(model, [get_price_for_token, get_rug_score], system=prompt,checkpointer=memory)
 
