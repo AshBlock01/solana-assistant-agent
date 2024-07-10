@@ -53,8 +53,8 @@ The price of BTC is $57945.65.
 
 Replace the following placeholders with your actual information:
 
-API_KEY: Your Groq API key.
-messages: The content of the message you want to send to the assistant.
+API_KEY: Your Groq API key. </br>
+messages: The content of the message you want to send to the assistant.</br>
 thread: The configuration for the thread you want to use.
 
 ## Contributing
