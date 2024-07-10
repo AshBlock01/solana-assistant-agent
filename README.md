@@ -38,3 +38,24 @@ The rug score for MAXt5moBxMd665GKPx6bammFf5t9pPSG6q7z9Adtm9Z is 400.
 The risks flagged are "Low amount of LP Providers" with a score of 300 and "Mutable metadata" with a score of 100.
 ```
 
+Example 2: Fetching Bitcoin Price
+```python
+messages = [HumanMessage(content="what is BTC price")]
+thread = {"configurable": {"thread_id": "2"}}
+
+result = agent.graph.invoke({"messages": messages}, thread)
+print(result['messages'][-1].content)
+```
+Expected Output:
+```The price of BTC is $57945.65.
+```
+
+Replace the following placeholders with your actual information:
+
+API_KEY: Your Groq API key.
+messages: The content of the message you want to send to the assistant.
+thread: The configuration for the thread you want to use.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request if you have any suggestions or improvements.
+
