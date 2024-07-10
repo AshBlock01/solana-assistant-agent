@@ -47,7 +47,8 @@ result = agent.graph.invoke({"messages": messages}, thread)
 print(result['messages'][-1].content)
 ```
 Expected Output:
-```The price of BTC is $57945.65.
+```
+The price of BTC is $57945.65.
 ```
 
 Replace the following placeholders with your actual information:
